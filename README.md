@@ -1,5 +1,10 @@
 # QuadraticFloorII
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23794942.svg)](https://doi.org/10.5281/zenodo.23794942)
+
+Software archive: version v1.0 is [doi:10.5281/zenodo.23794943](https://doi.org/10.5281/zenodo.23794943);
+all versions are [doi:10.5281/zenodo.23794942](https://doi.org/10.5281/zenodo.23794942).
+
 Lean 4 / Mathlib formalization of the remaining floor-sum results of J. S. Farland, *Quadratic Floor
 Sums, Class Numbers, and the Trace of a Quartic Bernoulli Number* (manuscript, 2026), and of one
 formula of Paper III of the author's series. It is the sequel of
