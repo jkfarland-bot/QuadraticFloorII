@@ -14,7 +14,9 @@ formula of Paper III of the author's series. It is the sequel of
 renamed into the namespace `QuadraticFloorII`.
 
 The companion paper is J. S. Farland, *Quadratic floor sums II: fibre sums and quartic traces at
-conductor 8ℓp, formalized in Lean* (preprint, Zenodo, 2026; DOI to be added).
+conductor 8ℓp, formalized in Lean* (preprint, Zenodo, 2026; v1.0
+[doi:10.5281/zenodo.23797606](https://doi.org/10.5281/zenodo.23797606), all versions
+[doi:10.5281/zenodo.23797605](https://doi.org/10.5281/zenodo.23797605)).
 
 For an odd prime `p`, put `𝒮_{A,B,C}(p) = ∑_{n<p} (-1)^⌊(An² + Bn + C)/p⌋`, `η_p = χ_{-8p}`,
 `ϑ_{p,ψ} = η_p χ_{-4}^{δ_ψ} ψ` for a character `ψ` modulo `A`, and `B_{1,f}^{(q)} = (1/q) ∑_{x≤q} x f(x)`.
