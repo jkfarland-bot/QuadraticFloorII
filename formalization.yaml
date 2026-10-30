@@ -1,0 +1,238 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "QuadraticFloorII: fibre sums and quartic traces at conductor 8lp"
+  description: >-
+    Sequel to QuadraticFloor. For an odd prime p, the alternating floor sums
+    S_{A,B,C}(p) = sum over 0 <= n < p of (-1)^floor((A n^2 + B n + C)/p) with admissible (B, C) are
+    averages of first Bernoulli numbers of the odd characters vartheta_{p,psi} = eta_p chi_{-4}^delta psi
+    modulo 8Ap. The development proves that, weighted by psi_0(b)^2 and summed over the units b modulo
+    A, these sums give minus the sum of B_{1,vartheta_{p,psi}} over the fibre psi^2 = psi_0^2, which is
+    real when psi_0^4 = 1; that for a prime l = 1 (mod 4) and a quartic character xi modulo l the real
+    part of B_{1,Theta_{l,p}}, Theta_{l,p} = vartheta_{p,xi}, and the Bernoulli number of
+    eta_p (./l) are signed combinations of floor sums (the case l = 13 included); the Euler-factor
+    relation B_{1,f 1_{l does not divide}}^{(ml)} = (1 - f(l)) B_{1,f}^{(m)} and the class-number shapes of
+    the coefficients three and five; the quarter-range formula
+    B_{1,vartheta_{p,psi}}^{(8Ap)} = -sum_{0<x<=2Ap} vartheta_{p,psi}(x); an elementary proof that both
+    coordinates of B_{1,Theta_{l,p}} are even integers; and the half-range triangular sum
+    2 sum_{n=1}^{(p-1)/2} (-1)^floor(n(n+1)/p) = S_{1,1,0}(p) - 2 + (-2/p).
+  authors:
+    - "Joseph S. Farland"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Joseph S. Farland"
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11A15", "11B68", "11R29", "11R16", "68V20"]
+
+sources:
+  - title: "Quadratic floor sums II: fibre sums and quartic traces at conductor 8lp, formalized in Lean"
+    authors:
+      - "Joseph S. Farland"
+    type: "article"
+    location: "Preprint, Zenodo, 2026"
+    relationship: "formalizes"
+    note: >-
+      The companion paper of this formalization, by the same author. It restates the formalized
+      results with proofs that follow the formal ones, and gives the correspondence between the
+      manuscripts, the paper and the Lean names.
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
+  - title: "Quadratic Floor Sums, Class Numbers, and the Trace of a Quartic Bernoulli Number"
+    authors:
+      - "Joseph S. Farland"
+    type: "article"
+    location: "Unpublished manuscript (revised research draft), 2026"
+    relationship: "formalizes"
+    note: >-
+      Same author. Formalized here: equation (12) (the Euler factor), Theorem 4.2, Corollary 4.3 and
+      equation (24) of Corollary 4.5 in Bernoulli form, Corollaries 3.5 and 3.6, Theorem 5.1 with the
+      case l = 13, and the parity part of Corollary 4.8 (by an elementary route). The rest of the
+      floor-sum results were formalized in QuadraticFloor. Not formalized: Dirichlet's formula,
+      Proposition 4.7 and the rest of Corollary 4.8, Section 6 and Remark 5.2. On novelty: Corollary 3.5
+      is one step from Theorem 3.2; the Euler factor and the quarter-range formula are classical;
+      class number formulas for imaginary cyclic quartic fields through short character sums are
+      classical (Hudson; Hardy, Hudson, Richman, Williams and Holtz; Williams); the floor-sum
+      expression of Re B_{1,Theta_{l,p}} was not found in the sources searched; the evenness of
+      both coordinates is weaker than the genus-theory divisibility 4 | h, and only its elementary
+      proof is new.
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
+  - title: "Band sums and quadratic floor sums: class numbers, a quartic trace, and an alternating count"
+    authors:
+      - "Joseph S. Farland"
+    type: "article"
+    location: "Unpublished manuscript (Paper III of the author's series), 2026"
+    relationship: "formalizes"
+    note: "Same author. Formalized here: Theorem 4.4, second formula (half-range triangular sum), in Bernoulli form."
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
+  - title: "Class numbers of imaginary cyclic quartic fields and related quaternary systems"
+    authors:
+      - "R. H. Hudson"
+    type: "article"
+    location: "Pacific J. Math. 115 (1984), 129-142"
+    relationship: "background"
+    note: "Dirichlet-type class number formulas for imaginary cyclic quartic fields through coset sums."
+    license: "unknown"
+    author_endorsement: "n/a"
+  - title: "Calculation of the class numbers of imaginary cyclic quartic fields"
+    authors:
+      - "K. Hardy"
+      - "R. H. Hudson"
+      - "D. Richman"
+      - "K. S. Williams"
+      - "N. M. Holtz"
+    type: "article"
+    location: "Math. Comp. 49 (1987), 615-620"
+    relationship: "background"
+    note: "Character-sum formulas for the class numbers of imaginary cyclic quartic fields."
+    license: "unknown"
+    author_endorsement: "n/a"
+  - title: "The class number two problem for certain quartic fields"
+    authors:
+      - "K. S. Williams"
+    type: "article"
+    location: "RIMS Kokyuroku 603 (1987), 51-59"
+    relationship: "background"
+    note: "Relative class numbers of imaginary cyclic quartic fields as |sum_{0<n<f/2} chi(n)|^2 times a constant, and in coset-count form; the half-range relative of the quarter-range formula."
+    license: "unknown"
+    author_endorsement: "n/a"
+
+related_formalizations:
+  - id: "https://doi.org/10.5281/zenodo.23726772"
+    relationship: "builds-on"
+    note: "QuadraticFloor by the same author (the first part of the manuscript). Its files are copied here and renamed into the QuadraticFloorII namespace."
+
+status:
+  scope: >-
+    Formalized: the results listed under alignment. Not formalized: Dirichlet's formula
+    B_{1,chi_D} = -h(D), which turns the Bernoulli forms into class numbers; the primitivity, order and
+    conductor of Theta_{l,p}; the quartic field K_p, its class number and the formula for
+    |Im B_{1,Theta_p}| (Proposition 4.7, Corollary 4.8 apart from parity); the non-elimination results of
+    Section 6, which rest on class numbers near 1.3e7 and large determinants; the sextic cases of
+    Remark 5.2.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Claude (Anthropic)"]
+      framework: "Claude.ai with code execution"
+      tool_setup: >-
+        AI-assisted: the Lean code was drafted and repaired by Claude against the manuscripts'
+        statements and proofs, compiled locally with lake, and the export of Solution was checked with
+        the Lean kernel, nanoda and con-ron.
+      cost:
+        wall_time: "about one day"
+        spend_usd: "subscription-based"
+        hardware: "API-only plus local machine"
+      prompting_notes: "The model was given the manuscripts' statements and proofs and asked to formalize them without sorry or native_decide."
+  spend_usd: "subscription-based"
+  notes: >-
+    The author chose the scope: the floor-sum results of the manuscript left out of QuadraticFloor that
+    need neither class field theory nor large class-number computations, and the half-range formula of
+    Paper III.
+
+fidelity:
+  divergences: >-
+    All statements are in Bernoulli form, with chi_{-8lp} = eta_p (./l), chi_{-24p} = eta_p chi_{-4} (./3)
+    and chi_{-40p} = eta_p (./5) written as functions. Corollary 3.5 is stated as a sum over all residues b
+    (the weight psi_0(b)^2 vanishes off the units) with admissible lifts B_b = b mod A, instead of a sum over
+    square-class representatives with the factor 2^(-omega(A)); for prime l the representative form is
+    proved within Theorem 5.1, where the representatives (B_s, C_s) are arbitrary functions on ZMod l
+    constrained on sqClasses l, the squares of nonzero residues. The quartic character is any
+    DirichletCharacter C l of order 4, and Theta_{l,p} is vartheta p xi, which carries chi_{-4} exactly
+    when xi(-1) = -1, i.e. l = 5 (mod 8). The Euler factor is proved for every function of period m with
+    vanishing period sum and every l >= 1, Corollary 3.6 under psi_0^4 = 1 alone, the quarter-range
+    formula for every character modulo every odd A, and the evenness of both coordinates without the
+    hypothesis p != l (so quartic_trace_even includes p = 5). The quadratic part of Theorem 5.1 is stated
+    without a character among its hypotheses; its proof chooses a quartic character. Not formalized
+    from Corollaries 3.5 and 3.6: the converse (the fibre sums determine the individual floor sums) and
+    the remark that the fibre contains no real character. The parity part of Corollary 4.8 is proved from the quarter-range formula and the
+    symmetry x -> 2lp - x instead of the class number formula for K_p. In Corollary 4.5 (24) the
+    Legendre symbol (p/5) is written jacobiSym p 5.
+
+review:
+  status: "self-assessed"
+  reviewers:
+    - "Joseph S. Farland"
+  notes: >-
+    The definitions in Challenge.lean are copied verbatim from the development and compared by
+    Comparator. The statements and the companion paper were checked by an independent AI review, and
+    check/statements.py recomputes every statement numerically. No external referee has reviewed the
+    manuscripts or the formalization.
+
+alignment:
+  namespace: "QuadraticFloorII"
+  statements:
+    - source: "Equation (12), the Euler factor, for any function of period m with vanishing period sum"
+      lean: "QuadraticFloorII.euler_factor"
+      module: "Challenge"
+      status: "proved"
+    - source: "Equation (12) for eta_p, every l >= 1"
+      lean: "QuadraticFloorII.euler_factor_eta"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 4.2 in class-number shape (Bernoulli form)"
+      lean: "QuadraticFloorII.floorSum_three_class"
+      module: "Challenge"
+      status: "proved"
+    - source: "Corollary 4.3 (Bernoulli form)"
+      lean: "QuadraticFloorII.class_twentyfour"
+      module: "Challenge"
+      status: "proved"
+    - source: "Corollary 4.5, equation (24) (Bernoulli form)"
+      lean: "QuadraticFloorII.class_forty"
+      module: "Challenge"
+      status: "proved"
+    - source: "Corollary 3.5, summed over units"
+      lean: "QuadraticFloorII.fibre_sum"
+      module: "Challenge"
+      status: "proved"
+    - source: "Corollary 3.6"
+      lean: "QuadraticFloorII.fibre_sum_real"
+      module: "Challenge"
+      status: "proved"
+    - source: "Existence of a quartic character modulo a prime l = 1 (mod 4) (hypothesis of Theorem 5.1)"
+      lean: "QuadraticFloorII.quartic_exists"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proof of Theorem 5.1: xi^2 = (./l), the fibres {xi, xi^-1} and {1, xi^2}"
+      lean: "QuadraticFloorII.quartic_fibres"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 5.1, first identity (the quartic trace)"
+      lean: "QuadraticFloorII.conductor_trace"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 5.1, second identity (Bernoulli form)"
+      lean: "QuadraticFloorII.conductor_quadratic"
+      module: "Challenge"
+      status: "proved"
+    - source: "Display after Theorem 5.1, l = 13"
+      lean: "QuadraticFloorII.conductor_thirteen"
+      module: "Challenge"
+      status: "proved"
+    - source: "Quarter-range formula B_{1,vartheta} = -sum_{0<x<=2Ap} vartheta(x) (used for Corollary 4.8)"
+      lean: "QuadraticFloorII.quarter_range"
+      module: "Challenge"
+      status: "proved"
+    - source: "Corollary 4.8, parity of both coordinates, for every prime l = 1 (mod 4)"
+      lean: "QuadraticFloorII.conductor_even"
+      module: "Challenge"
+      status: "proved"
+    - source: "Corollary 4.8, parity of both coordinates of B_{1,Theta_p}"
+      lean: "QuadraticFloorII.quartic_trace_even"
+      module: "Challenge"
+      status: "proved"
+    - source: "Paper III, Theorem 4.4 (second formula), Bernoulli form"
+      lean: "QuadraticFloorII.half_range_triangular"
+      module: "Challenge"
+      status: "proved"
+
+acknowledgements: "Lean 4 and Mathlib; Claude (Anthropic) for formalization assistance; the Palomar starter template for the check scripts."

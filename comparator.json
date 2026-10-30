@@ -1,0 +1,43 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "QuadraticFloorII.euler_factor",
+    "QuadraticFloorII.euler_factor_eta",
+    "QuadraticFloorII.floorSum_three_class",
+    "QuadraticFloorII.class_twentyfour",
+    "QuadraticFloorII.class_forty",
+    "QuadraticFloorII.fibre_sum",
+    "QuadraticFloorII.fibre_sum_real",
+    "QuadraticFloorII.quartic_exists",
+    "QuadraticFloorII.quartic_fibres",
+    "QuadraticFloorII.conductor_trace",
+    "QuadraticFloorII.conductor_quadratic",
+    "QuadraticFloorII.conductor_thirteen",
+    "QuadraticFloorII.quarter_range",
+    "QuadraticFloorII.conductor_even",
+    "QuadraticFloorII.quartic_trace_even",
+    "QuadraticFloorII.half_range_triangular"
+  ],
+  "definition_names": [
+    "QuadraticFloorII.floorSum",
+    "QuadraticFloorII.Admissible",
+    "QuadraticFloorII.eta",
+    "QuadraticFloorII.bern",
+    "QuadraticFloorII.vartheta",
+    "QuadraticFloorII.lg5",
+    "QuadraticFloorII.xiFun",
+    "QuadraticFloorII.xi",
+    "QuadraticFloorII.Theta",
+    "QuadraticFloorII.zB",
+    "QuadraticFloorII.osum",
+    "QuadraticFloorII.fibre",
+    "QuadraticFloorII.sqClasses"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}
