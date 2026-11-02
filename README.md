@@ -3,6 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23794942.svg)](https://doi.org/10.5281/zenodo.23794942)
 
 Software archive: version v1.0 is [doi:10.5281/zenodo.23794943](https://doi.org/10.5281/zenodo.23794943);
+version v1.1 is [doi:10.5281/zenodo.23883235](https://doi.org/10.5281/zenodo.23883235);
 all versions are [doi:10.5281/zenodo.23794942](https://doi.org/10.5281/zenodo.23794942).
 
 Lean 4 / Mathlib formalization of the remaining floor-sum results of J. S. Farland, *Quadratic Floor
@@ -14,7 +15,8 @@ renamed into the namespace `QuadraticFloorII`.
 
 The companion paper is J. S. Farland, *Quadratic floor sums II: fibre sums and quartic traces at
 conductor 8ℓp, formalized in Lean* (preprint, Zenodo, 2026; v1.0
-[doi:10.5281/zenodo.23797606](https://doi.org/10.5281/zenodo.23797606), all versions
+[doi:10.5281/zenodo.23797606](https://doi.org/10.5281/zenodo.23797606), v2.0
+[doi:10.5281/zenodo.23883390](https://doi.org/10.5281/zenodo.23883390), all versions
 [doi:10.5281/zenodo.23797605](https://doi.org/10.5281/zenodo.23797605)).
 
 For an odd prime `p`, put `𝒮_{A,B,C}(p) = ∑_{n<p} (-1)^⌊(An² + Bn + C)/p⌋`, `η_p = χ_{-8p}`,
