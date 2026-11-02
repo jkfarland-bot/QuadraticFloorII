@@ -67,9 +67,6 @@ for p in primerange(5, 200):
         B40 = Fr(sum(x * eta(p, x) * leg(x, 5) for x in range(1, 40 * p + 1)), 40 * p)
         if -B40 != 2 * (floorSum(5, 1, 0, p) + floorSum(5, 3, 0, p) - 2) - (1 + leg(p, 5)) * (S1 - 1):
             F('class_forty')
-    # half range
-    h = sum(negOnePow((n * (n + 1)) // p) for n in range(1, (p - 1) // 2 + 1))
-    if 2 * h != S1 - 2 + leg(-2, p): F('half_range_triangular')
 
 # fibre sums, reality, quarter range
 for A in [1, 3, 5, 7, 9, 15, 21]:

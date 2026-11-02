@@ -95,7 +95,8 @@ noncomputable def xi : DirichletCharacter ℂ 5 where
       obtain ⟨b, hb⟩ : ∃ b : ZMod 5, a * b = 1 := by revert a; decide
       exact IsUnit.of_mul_eq_one b hb
 
-/-- `Θ_p = η_p χ_{-4} ξ`, the quartic character of conductor `40p`. -/
+/-- `Θ_p = η_p χ_{-4} ξ`, a quartic character of modulus `40p` (its conductor for `p ≠ 5`; `Θ_5` has
+conductor `40`). -/
 noncomputable def Theta (p x : ℕ) : ℂ :=
   (eta p x : ℂ) * (ZMod.χ₄ (x : ZMod 4) : ℂ) * xi (x : ZMod 5)
 

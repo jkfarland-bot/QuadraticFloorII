@@ -8,4 +8,3 @@ public import QuadraticFloorII.Quartic
 public import QuadraticFloorII.Conductor
 public import QuadraticFloorII.Parity
 public import QuadraticFloorII.Examples
-public import QuadraticFloorII.HalfRange

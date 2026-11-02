@@ -16,8 +16,7 @@
     "QuadraticFloorII.conductor_thirteen",
     "QuadraticFloorII.quarter_range",
     "QuadraticFloorII.conductor_even",
-    "QuadraticFloorII.quartic_trace_even",
-    "QuadraticFloorII.half_range_triangular"
+    "QuadraticFloorII.quartic_trace_even"
   ],
   "definition_names": [
     "QuadraticFloorII.floorSum",

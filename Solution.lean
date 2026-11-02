@@ -127,23 +127,18 @@ theorem quarter_range (hp2 : p ≠ 2) {A : ℕ} (hA : Odd A) (ψ : DirichletChar
     bern (8 * A * p) (vartheta p ψ) = -∑ x ∈ Icc 1 (2 * A * p), vartheta p ψ x :=
   bern_quarter hp2 hA ψ
 
-/-- **Both coordinates of `B_{1,Θ_{ℓ,p}}` are even integers**, for every prime `ℓ ≡ 1 (mod 4)`, quartic
-`ξ` modulo `ℓ` and odd prime `p`. -/
+/-- **Both coordinates of `B_{1,Θ_{ℓ,p}}^{(8ℓp)}` are even integers**, for every prime `ℓ ≡ 1 (mod 4)`,
+quartic `ξ` modulo `ℓ` and odd prime `p`. The modulus is `8ℓp` in every case; it is the conductor of
+`Θ_{ℓ,p}` only for `p ≠ ℓ` (at `p = ℓ` the conductor is `8p`). -/
 theorem conductor_even (hp2 : p ≠ 2) {ℓ : ℕ} [Fact ℓ.Prime] {ξ : DirichletCharacter ℂ ℓ} (h4 : ℓ % 4 = 1) (hξ : orderOf ξ = 4) :
     ∃ a b : ℤ, bern (8 * ℓ * p) (vartheta p ξ) = 2 * a + 2 * b * Complex.I :=
   bern_even hp2 h4 hξ
 
-/-- **Corollary 4.8, parity part.** Both coordinates of `B_{1,Θ_p}` (conductor `40p`) are even integers. -/
+/-- **Corollary 4.8, parity part.** Both coordinates of `B_{1,Θ_p}^{(40p)}` are even integers. The
+modulus is `40p`; it is the conductor of `Θ_p` for `p ≠ 5`, while `Θ_5` has conductor `40`. -/
 theorem quartic_trace_even (hp2 : p ≠ 2) :
     ∃ a b : ℤ, bern (40 * p) (Theta p) = 2 * a + 2 * b * Complex.I :=
   theta_even hp2
-
-/-- **The half-range triangular sum** (Paper III, Theorem 4.4):
-`2 ∑_{n=1}^{(p-1)/2} (-1)^{⌊n(n+1)/p⌋} = 𝒮_1(p) - 2 + (-2/p)`. -/
-theorem half_range_triangular (hp2 : p ≠ 2) :
-    2 * ∑ n ∈ Icc 1 ((p - 1) / 2), ((((n : ℤ) * (n + 1)) / p).negOnePow : ℤ) =
-      floorSum 1 1 0 p - 2 + legendreSym p (-2) :=
-  half_range_one' hp2
 
 end Statements
 

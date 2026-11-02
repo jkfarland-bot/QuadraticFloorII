@@ -9,14 +9,15 @@ project:
     averages of first Bernoulli numbers of the odd characters vartheta_{p,psi} = eta_p chi_{-4}^delta psi
     modulo 8Ap. The development proves that, weighted by psi_0(b)^2 and summed over the units b modulo
     A, these sums give minus the sum of B_{1,vartheta_{p,psi}} over the fibre psi^2 = psi_0^2, which is
-    real when psi_0^4 = 1; that for a prime l = 1 (mod 4) and a quartic character xi modulo l the real
+    real when psi_0^4 = 1; that for a prime l = 1 (mod 4), a quartic character xi modulo l and an odd
+    prime p != l the real
     part of B_{1,Theta_{l,p}}, Theta_{l,p} = vartheta_{p,xi}, and the Bernoulli number of
     eta_p (./l) are signed combinations of floor sums (the case l = 13 included); the Euler-factor
     relation B_{1,f 1_{l does not divide}}^{(ml)} = (1 - f(l)) B_{1,f}^{(m)} and the class-number shapes of
     the coefficients three and five; the quarter-range formula
-    B_{1,vartheta_{p,psi}}^{(8Ap)} = -sum_{0<x<=2Ap} vartheta_{p,psi}(x); an elementary proof that both
-    coordinates of B_{1,Theta_{l,p}} are even integers; and the half-range triangular sum
-    2 sum_{n=1}^{(p-1)/2} (-1)^floor(n(n+1)/p) = S_{1,1,0}(p) - 2 + (-2/p).
+    B_{1,vartheta_{p,psi}}^{(8Ap)} = -sum_{0<x<=2Ap} vartheta_{p,psi}(x); and an elementary proof that
+    both coordinates of B_{1,Theta_{l,p}}^{(8lp)} are even integers, for every odd prime p. Every
+    Bernoulli number is taken at a stated modulus; 8lp is the conductor of Theta_{l,p} only for p != l.
   authors:
     - "Joseph S. Farland"
   license: "Apache-2.0"
@@ -60,15 +61,6 @@ sources:
       proof is new.
     license: "CC-BY-4.0"
     author_endorsement: "participated"
-  - title: "Band sums and quadratic floor sums: class numbers, a quartic trace, and an alternating count"
-    authors:
-      - "Joseph S. Farland"
-    type: "article"
-    location: "Unpublished manuscript (Paper III of the author's series), 2026"
-    relationship: "formalizes"
-    note: "Same author. Formalized here: Theorem 4.4, second formula (half-range triangular sum), in Bernoulli form."
-    license: "CC-BY-4.0"
-    author_endorsement: "participated"
   - title: "Class numbers of imaginary cyclic quartic fields and related quaternary systems"
     authors:
       - "R. H. Hudson"
@@ -110,7 +102,9 @@ status:
   scope: >-
     Formalized: the results listed under alignment. Not formalized: Dirichlet's formula
     B_{1,chi_D} = -h(D), which turns the Bernoulli forms into class numbers; the primitivity, order and
-    conductor of Theta_{l,p}; the quartic field K_p, its class number and the formula for
+    conductor of Theta_{l,p} (the statements use the modulus 8lp, which is the conductor only for
+    p != l; at p = l the character has period and conductor 8p, so Theta_5 has conductor 40, not 200,
+    and the Bernoulli number is the same at both moduli); the quartic field K_p, its class number and the formula for
     |Im B_{1,Theta_p}| (Proposition 4.7, Corollary 4.8 apart from parity); the non-elimination results of
     Section 6, which rest on class numbers near 1.3e7 and large determinants; the sextic cases of
     Remark 5.2.
@@ -135,8 +129,9 @@ automation:
   spend_usd: "subscription-based"
   notes: >-
     The author chose the scope: the floor-sum results of the manuscript left out of QuadraticFloor that
-    need neither class field theory nor large class-number computations, and the half-range formula of
-    Paper III.
+    need neither class field theory nor large class-number computations. Release v1.1 removes the
+    half-range triangular sum of Paper III, Theorem 4.4, which v1.0 included, after the Palomar review:
+    it is the symmetry n -> p - 1 - n of the case A = 1 and does not stand as a separate result.
 
 fidelity:
   divergences: >-
@@ -150,7 +145,9 @@ fidelity:
     when xi(-1) = -1, i.e. l = 5 (mod 8). The Euler factor is proved for every function of period m with
     vanishing period sum and every l >= 1, Corollary 3.6 under psi_0^4 = 1 alone, the quarter-range
     formula for every character modulo every odd A, and the evenness of both coordinates without the
-    hypothesis p != l (so quartic_trace_even includes p = 5). The quadratic part of Theorem 5.1 is stated
+    hypothesis p != l (so quartic_trace_even includes p = 5). In those cases the Bernoulli numbers are
+    taken at the modulus 8lp (40p), which exceeds the conductor 8p (40 at p = 5); the value is the same
+    at both moduli, since the character has vanishing sum over its period. The quadratic part of Theorem 5.1 is stated
     without a character among its hypotheses; its proof chooses a quartic character. Not formalized
     from Corollaries 3.5 and 3.6: the converse (the fibre sums determine the individual floor sums) and
     the remark that the fibre contains no real character. The parity part of Corollary 4.8 is proved from the quarter-range formula and the
@@ -226,12 +223,8 @@ alignment:
       lean: "QuadraticFloorII.conductor_even"
       module: "Challenge"
       status: "proved"
-    - source: "Corollary 4.8, parity of both coordinates of B_{1,Theta_p}"
+    - source: "Corollary 4.8, parity of both coordinates of B_{1,Theta_p}^{(40p)}, including p = 5"
       lean: "QuadraticFloorII.quartic_trace_even"
-      module: "Challenge"
-      status: "proved"
-    - source: "Paper III, Theorem 4.4 (second formula), Bernoulli form"
-      lean: "QuadraticFloorII.half_range_triangular"
       module: "Challenge"
       status: "proved"
 

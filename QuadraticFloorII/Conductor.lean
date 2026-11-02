@@ -5,7 +5,7 @@ public import QuadraticFloorII.Quartic
 @[expose] public section
 
 /-!
-# Quartic traces at conductor `8ℓp` (Theorem 5.1)
+# Quartic traces at conductor `8ℓp`, `p ≠ ℓ` (Theorem 5.1)
 
 Let `ℓ ≡ 1 (mod 4)` be prime, `ξ` a character of order `4` modulo `ℓ`, `p ≠ ℓ` an odd prime and
 `Θ_{ℓ,p} = ϑ_{p,ξ} = η_p χ_{-4}^{δ_ℓ} ξ`. For each square class `s` of units modulo `ℓ` fix an admissible
