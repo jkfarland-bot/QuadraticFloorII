@@ -18,21 +18,7 @@
     "QuadraticFloorII.conductor_even",
     "QuadraticFloorII.quartic_trace_even"
   ],
-  "definition_names": [
-    "QuadraticFloorII.floorSum",
-    "QuadraticFloorII.Admissible",
-    "QuadraticFloorII.eta",
-    "QuadraticFloorII.bern",
-    "QuadraticFloorII.vartheta",
-    "QuadraticFloorII.lg5",
-    "QuadraticFloorII.xiFun",
-    "QuadraticFloorII.xi",
-    "QuadraticFloorII.Theta",
-    "QuadraticFloorII.zB",
-    "QuadraticFloorII.osum",
-    "QuadraticFloorII.fibre",
-    "QuadraticFloorII.sqClasses"
-  ],
+  "definition_names": [],
   "permitted_axioms": [
     "propext",
     "Quot.sound",
