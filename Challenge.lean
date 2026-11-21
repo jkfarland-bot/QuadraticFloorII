@@ -2,7 +2,7 @@ module
 
 public import Mathlib
 
-public section
+@[expose] public section
 
 /-!
 # Quadratic floor sums II: statements
