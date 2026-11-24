@@ -142,8 +142,8 @@ fidelity:
     proved within Theorem 5.1, where the representatives (B_s, C_s) are arbitrary functions on ZMod l
     constrained on sqClasses l, the squares of nonzero residues. The quartic character is any
     DirichletCharacter C l of order 4, and Theta_{l,p} is vartheta p xi, which carries chi_{-4} exactly
-    when xi(-1) = -1, i.e. l = 5 (mod 8). The Euler factor is proved for every function of period m with
-    vanishing period sum and every l >= 1, Corollary 3.6 under psi_0^4 = 1 alone, the quarter-range
+    when xi(-1) = -1, i.e. l = 5 (mod 8). The Euler factor is proved for every function of period m > 0
+    with vanishing period sum and every l >= 1, Corollary 3.6 under psi_0^4 = 1 alone, the quarter-range
     formula for every character modulo every odd A, and the evenness of both coordinates without the
     hypothesis p != l (so quartic_trace_even includes p = 5). In those cases the Bernoulli numbers are
     taken at the modulus 8lp (40p), which exceeds the conductor 8p (40 at p = 5); the value is the same
@@ -162,13 +162,17 @@ review:
     The definitions in Challenge.lean are copied verbatim from the development and compared by
     Comparator, bodies included: comparator.json lists no definition holes (earlier
     releases listed the definitions as holes, so only their names and types were compared). The statements and the companion paper were checked by an independent AI review, and
-    check/statements.py recomputes every statement numerically. No external referee has reviewed the
+    check/statements.py runs numerical checks of selected statements and examples: the Euler factor for
+    eta_p, the class-number shapes for A = 3 and A = 5, the fibre sums, their reality and the
+    quarter-range formula for small A and p, and the conductor-8lp statements for l <= 41 and p < 70.
+    It does not check the general Euler factor (euler_factor) or the existence and fibre identities for
+    quartic characters (quartic_exists, quartic_fibres). No external referee has reviewed the
     manuscripts or the formalization.
 
 alignment:
   namespace: "QuadraticFloorII"
   statements:
-    - source: "Equation (12), the Euler factor, for any function of period m with vanishing period sum"
+    - source: "Equation (12), the Euler factor, for any function of period m > 0 with vanishing period sum"
       lean: "QuadraticFloorII.euler_factor"
       module: "Challenge"
       status: "proved"
