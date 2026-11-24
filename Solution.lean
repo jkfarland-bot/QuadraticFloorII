@@ -20,10 +20,14 @@ section Statements
 
 variable {p : ℕ} [hp : Fact p.Prime]
 
-/-- **The Euler factor** (manuscript, equation (12)). For `f` of period `m` with vanishing period
-sum and `f(ℓy) = f(ℓ) f(y)`: `B_{1,f·1_{ℓ∤·}}^{(mℓ)} = (1 - f(ℓ)) B_{1,f}^{(m)}`. -/
-theorem euler_factor (f : ℕ → ℂ) {m ℓ : ℕ} (hℓ : 0 < ℓ) (hper : ∀ x, f (x + m) = f x)
-    (hsum : ∑ x ∈ Icc 1 m, f x = 0) (hmul : ∀ y, f (ℓ * y) = f ℓ * f y) :
+-- The hypothesis `hm` makes `m` a genuine period, so that `hsum` and `bern m f` have their intended
+-- meaning (at `m = 0` the statement would be `0 = 0`); the proof does not need it.
+set_option linter.unusedVariables false in
+/-- **The Euler factor** (manuscript, equation (12)). For `f` of period `m > 0` with vanishing
+period sum and `f(ℓy) = f(ℓ) f(y)`: `B_{1,f·1_{ℓ∤·}}^{(mℓ)} = (1 - f(ℓ)) B_{1,f}^{(m)}`. -/
+theorem euler_factor (f : ℕ → ℂ) {m ℓ : ℕ} (hm : 0 < m) (hℓ : 0 < ℓ)
+    (hper : ∀ x, f (x + m) = f x) (hsum : ∑ x ∈ Icc 1 m, f x = 0)
+    (hmul : ∀ y, f (ℓ * y) = f ℓ * f y) :
     bern (m * ℓ) (fun x => f x * (if ℓ ∣ x then 0 else 1)) = (1 - f ℓ) * bern m f :=
   bern_euler f hℓ hper hsum hmul
 

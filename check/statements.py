@@ -1,4 +1,6 @@
-# Numerical check of the Lean statements of QuadraticFloorII, exactly as formalized.
+# Numerical checks of selected statements of QuadraticFloorII, as formalized, and examples.
+# Not checked here: the general Euler factor (euler_factor) and the existence and fibre identities for
+# quartic characters (quartic_exists, quartic_fibres).
 # Floor sums and Kronecker symbols are exact; Bernoulli numbers of characters of order dividing 4 are
 # computed exactly in Q(i) (Fractions); other characters use floating point with tolerance 1e-7.
 import cmath

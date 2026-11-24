@@ -68,7 +68,7 @@ No `sorry`, no `native_decide`. Every result depends only on `propext`, `Classic
   number is the same at both moduli, since `Θ_{p,p}` has vanishing sum over a period
   (`B^{(200)}_{1,Θ_5} = B^{(40)}_{1,Θ_5} = 2i`), so these statements are about the primitive character of
   conductor `8p` in that case. No Lean statement asserts a conductor. `Q_ℓ` is `sqClasses ℓ`, the squares of nonzero residues.
-- **Strengthenings.** The Euler factor holds for every function of period `m` with vanishing period sum
+- **Strengthenings.** The Euler factor holds for every function of period `m > 0` with vanishing period sum
   and every `ℓ ≥ 1`; Corollary 3.6 needs only `ψ₀⁴ = 1`; the quarter-range formula holds for every
   character modulo every odd `A`; the evenness of both coordinates holds without `p ≠ ℓ` (so
   `quartic_trace_even` includes `p = 5`, at the modulus `200`). `conductor_quadratic` has no character among its hypotheses; its
@@ -114,7 +114,9 @@ under the Apache License 2.0 (`LICENSE`); the papers are CC BY 4.0.
   names and types).
 - `formalization.yaml` records authorship, sources, AI assistance, scope and fidelity.
 - `scripts/` holds Palomar's checks, copied from the Palomar starter template.
-- `check/statements.py` recomputes every formalized statement numerically.
+- `check/statements.py` runs numerical checks of selected statements and examples. It does not check the
+  general Euler factor (`euler_factor`) or the existence and fibre identities for quartic characters
+  (`quartic_exists`, `quartic_fibres`).
 
 ```
 python3 scripts/check-lean-sources.py
